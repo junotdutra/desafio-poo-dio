@@ -44,7 +44,8 @@ public class Main {
         devCamila.progredir(curso3);
         System.out.println("-");
         System.out.println("Conteúdos Concluidos João: ");
-        devCamila.getConteudos().stream().filter(conteudoDev -> conteudoDev.isConcluido()).forEach(conteudoDev -> System.out.println(conteudoDev.getConteudo().getTitulo()));
+        devCamila.getConteudos().stream().filter(conteudoDev -> conteudoDev.isConcluido()).forEach(conteudoDev -> System.out.println(conteudoDev.getConteudo().getTitulo() + " - Conclusão: " +
+                conteudoDev.getDataConclusao()));
         System.out.println("XP:" + devCamila.calcularTotalXp());
 
         System.out.println("-------");
@@ -59,7 +60,8 @@ public class Main {
         devJoao.progredir(mentoria);
         System.out.println("-");
         System.out.println("Conteúdos Concluidos João: ");
-      devJoao.getConteudos().stream().filter(conteudoDev -> conteudoDev.isConcluido()).forEach(conteudoDev -> System.out.println(conteudoDev.getConteudo().getTitulo()));
+      devJoao.getConteudos().stream().filter(conteudoDev -> conteudoDev.isConcluido()).forEach(conteudoDev -> System.out.println(conteudoDev.getConteudo().getTitulo() + " - Conclusão: " +
+              conteudoDev.getDataConclusao()));
         System.out.println("XP:" + devJoao.calcularTotalXp());
     }
 }
